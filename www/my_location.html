@@ -75,18 +75,20 @@
   </tr>
 </table>
             
-            <ul data-role="listview" id='container'></ul>
             
-    </div>   
+            
+    </div>  
+            <ul data-role="listview" id='container'></ul>
     </div>
-    </div>
-    
-    <script id='myTemplate' type='text/ractive'>
+          <script id='myTemplate' type='text/ractive'>
 	
 			{{#weather}}
     <li><img src="https://www.metaweather.com/static/img/weather/{{weather_state_abbr}}.svg" height="42" width="42"> {{weather_state_name}}</li>
 			{{/weather}}
     </script>
+    </div>
+    
+  
     
 </body>
 </html>
