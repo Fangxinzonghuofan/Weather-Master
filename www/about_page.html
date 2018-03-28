@@ -9,14 +9,27 @@
     <script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
     <script src="js/index.js"type="text/javascript" charset="utf-8"></script>
 	<link href="jquery-mobile/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+    <script src="./js/ractive.js"></script>
+    <script src="./js/my_weather.js"></script>
 </head>
 
 <body>
-  
+  <script id='template' type='text/ractive'>
+		<ul>
+		 {{#each fruitlist}}
+			<li> {{name}} </li>
+            <li> {{colour}} </li>
+            <li> {{price}} </li>
+			 {{/each}}
+		</ul>
+  		
+    </script>
+    
     <div data-role="page" id="page4"> 
         <div data-role="header"><a href="index.html" data-icon="arrow-l">Back</a><h1>About page</h1></div>
         <div data-role="content">
             <h1>About page</h1>
+
         </div>
     </div>
 </body>
