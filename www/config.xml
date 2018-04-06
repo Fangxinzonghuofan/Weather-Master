@@ -6,7 +6,7 @@
         id        = "mob.app.dev.weathermaster"
         version   = "1.0.0">
 
-    <name>Weather Master</name>
+    <name>Weather Master Test</name>
 
     <description>
         A sample application that counts the occurances of lifecycle events.
@@ -23,4 +23,6 @@
 	<access origin="*"/>
    	<plugin name="cordova-plugin-whitelist" version="1" />
     <plugin name="cordova-plugin-geolocation-android-activator" />
+    <plugin name="cordova-plugin-dialogs"/>
+    <plugin name="cordova-plugin-local-notification" version="0.8" />
 </widget>
