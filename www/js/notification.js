@@ -2,16 +2,16 @@ var notification_count=0;
 
 $(document).on('pageinit', function() {
 
-	$('#messageButton').on('click', function() {
+	$('#TestButton').on('click', function() {
 		createMessage();
 	});
 	
-	$('#dialogButton').on('click', function() {
+	$('#DialogButton').on('click', function() {
 		createDialog();
 	});
 
 
-	$('#notificationButton').on('click', function() {
+	$('#NotificationButton').on('click', function() {
 		createNotification();
 	});
 
@@ -23,7 +23,7 @@ $(document).on('pageinit', function() {
 function createMessage(){		
 	//phoneGap and jQueryMobile do not support toast messages directly
     //so we can add this using toast.js
-    new Toast({content: 'An example message.', duration: 1000}); 	
+    new Toast({content: 'Yes you did it.', duration: 1000}); 	
 }
         	
 
