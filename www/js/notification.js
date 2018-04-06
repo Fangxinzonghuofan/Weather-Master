@@ -23,7 +23,7 @@ $(document).on('pageinit', function() {
 function createMessage(){		
 	//phoneGap and jQueryMobile do not support toast messages directly
     //so we can add this using toast.js
-    new Toast({content: 'Yes you did it.', duration: 1000}); 	
+    new Toast({content: 'God bless you.', duration: 1000}); 	
 }
         	
 
@@ -33,9 +33,9 @@ function createDialog() {
 	//here's a simple example
       
 	navigator.notification.confirm(
-    	'Are you hungry?',  // message
+    	'Did you bring an umbrella??',  // message
         dialogDismissed,         // callback
-        'Breaktime request',            // title
+        'Before you go out',            // title
         ['Yes', 'No']                  // buttons
     );
 
@@ -45,8 +45,8 @@ function createDialog() {
         	
 function dialogDismissed(buttonIndex) {
 	
-	if(buttonIndex==1) new Toast({content: "Take a break", duration: 3000});
-   	else if(buttonIndex==2) new Toast({content: 'Carry on then.', duration: 3000});
+	if(buttonIndex==1) new Toast({content: "Excellent", duration: 3000});
+   	else if(buttonIndex==2) new Toast({content: 'Think twice.', duration: 3000});
 
 }
 
@@ -65,8 +65,8 @@ function createNotification() {
     //
 	window.plugin.notification.local.schedule({ 
     	id: 		1,
-        title: 		"Hey you",
-        message: 	"This is an example notification",
+        title: 		"Mom's kind reminder",
+        message: 	"Don't forget to bring your umbrella, dear",
         date: 		notificationTime, 
         badge: 		notification_count++
    	});
