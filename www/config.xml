@@ -23,6 +23,8 @@
 	<access origin="*"/>
    	<plugin name="cordova-plugin-whitelist" version="1" />
     <plugin name="cordova-plugin-geolocation-android-activator" />
+    <!--Plugin to support gathering of location data--> 
+    <plugin name="cordova-plugin-geolocation"  />
     <plugin name="cordova-plugin-dialogs"/>
     <plugin name="cordova-plugin-local-notification" version="0.8" />
 </widget>
