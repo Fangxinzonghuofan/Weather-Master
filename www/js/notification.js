@@ -1,6 +1,9 @@
+ console.log("notification.js");
 var notification_count=0;
 
-$(document).on('pageinit', function() {
+$(document).on('pagecreate', '#pagefour', function(event) {
+    
+    console.log("notification.js pageinit");
 
 	$('#TestButton').on('click', function() {
 		createMessage();
@@ -12,6 +15,7 @@ $(document).on('pageinit', function() {
 
 
 	$('#NotificationButton').on('click', function() {
+        console.log("NotificationButton click listener");
 		createNotification();
 	});
 
@@ -54,6 +58,7 @@ function dialogDismissed(buttonIndex) {
    
 function createNotification() {
         		
+   console.log("createNotification");
 	//
     //generate a time to post notification
     //

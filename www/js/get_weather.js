@@ -1,6 +1,6 @@
 var feedURL = "https://www.metaweather.com/api/location/44418/";
 
-$(document).on('pagecreate', '#page3', function(event) {
+$(document).on('pagecreate', '#pagethree', function(event) {
 	
 	console.log("111");
 	// Use an HTML GET request to obtain data from an API
