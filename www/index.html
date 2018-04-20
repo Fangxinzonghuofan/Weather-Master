@@ -153,7 +153,7 @@
             
             <h2>Weather conditions</h2>
 
-<table class="mytable">
+<table class="mytable" id= "weatherTable">
   <tr>
     <th>Date</th>
     <th>Climate</th>
@@ -164,31 +164,7 @@
     <td>Maria Anders</td>
     <td>Germany</td>
   </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
+
 </table>
             
         
@@ -196,7 +172,20 @@
           <script id='myTemplate' type='text/ractive'>
 	
 			{{#weather}}
-    <li><img src="https://www.metaweather.com/static/img/weather/{{weather_state_abbr}}.svg" height="42" width="42"> {{weather_state_name}}</li>
+                <tr>
+                    <td> {{applicable_date}}
+                    </td>
+                    
+                     <td>
+                     <img src="https://www.metaweather.com/static/img/weather/{{weather_state_abbr}}.svg" height="42" width="42"> {{weather_state_name}}
+              
+                    </td>
+                    
+                     <td> {{the_temp}}
+                    </td>
+                
+              
+              </tr>
 			{{/weather}}
     </script>
     </div>

@@ -19,7 +19,7 @@ $(document).on('pagecreate', '#pagethree', function(event) {
 	
 	//Define Ractive binding
 	var ractive = new Ractive({
-    	el: 'container', <!-- where -->
+    	el: 'weatherTable', <!-- where -->
     	template: '#myTemplate', <!-- how -->
     	data: { weather : weather.consolidated_weather } <!-- what - specify the list of weather reports using dot notation-->
 	});
