@@ -17,6 +17,9 @@
         ZZY
     </author>
 
+    <access origin="*" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    
     <plugin name="cordova-plugin-geolocation-android-activator" />
     <plugin name="cordova-plugin-geolocation"  />
 
@@ -30,7 +33,6 @@
 </config-file>
     
     
-    <access origin="*" />
-    <plugin name="cordova-plugin-whitelist" version="1" />
+    
     
 </widget>
