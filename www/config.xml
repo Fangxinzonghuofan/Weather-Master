@@ -19,11 +19,13 @@
 
     <preference name="phonegap-version" value="cli-7.0.1" />
 	
-    <preference name="permissions"                value="none"/>   
+    
 	
 	<access origin="*"/>
     <plugin name="cordova-plugin-whitelist" version="1" />
-   <!--Android 6.0 or newer: Plugin to support runtime permissions--> 
+   
+    
+    <!--Android 6.0 or newer: Plugin to support runtime permissions--> 
     <plugin name="cordova-plugin-geolocation-android-activator" />
     
     <!--Plugin to support gathering of location data--> 
@@ -37,7 +39,6 @@
             <string>Give me your location! Let me have it!!!</string>
         </array>
     </config-file>
-    <plugin name="cordova-plugin-dialogs"/>
-    <plugin name="cordova-plugin-local-notification" version="0.8" />
+    
     
 </widget>
