@@ -132,6 +132,9 @@
     <div data-role="page" id="pagethree"> 
         <div data-role="header"><a href="#pageone" data-icon="arrow-l">Back</a><h1>my location</h1></div>
         <div data-role="content">
+            
+            <ul data-role="listview" id='container'></ul>
+            
 <!--
             <button id="getLocationBtn" class="btn" >get location</button>
             <input type="button" value="test button" name=“test_button”/>
@@ -145,6 +148,8 @@
       	<input type="text" name="lattext" id="lattext" value=""  />
       	<label for="time">Time:</label>
       	<input type="text" name="time" id="time" value=""  />
+            </div>
+                </div>
             
             <h2>Weather conditions</h2>
 
@@ -186,11 +191,8 @@
   </tr>
 </table>
             
-            
-            
-    </div>  
-            <ul data-role="listview" id='container'></ul>
-    </div>
+        
+    
           <script id='myTemplate' type='text/ractive'>
 	
 			{{#weather}}
