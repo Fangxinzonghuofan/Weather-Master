@@ -21,7 +21,20 @@ $(document).on('pagecreate', '#pagethree', function(event) {
 	var ractive = new Ractive({
     	el: 'weatherTable', <!-- where -->
     	template: '#myTemplate', <!-- how -->
-    	data: { weather : weather.consolidated_weather } <!-- what - specify the list of weather reports using dot notation-->
+    	data: { <!-- what - specify the list of weather reports using dot notation-->
+        
+            weather : weather.consolidated_weather, 
+            
+        format: function ( num ) {
+            return num.toFixed(0);
+        }, 
+         
+         format2: function ( num ) {
+            return num.toFixed(2);
+        }, 
+        
+        
+        } 
 	});
             
         }

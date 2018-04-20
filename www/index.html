@@ -170,7 +170,12 @@
         
     
           <script id='myTemplate' type='text/ractive'>
-	
+                <tr>
+                <th>Date</th>
+                <th>Climate</th>
+                <th>Temperature</th>
+              </tr>
+    
 			{{#weather}}
                 <tr>
                     <td> {{applicable_date}}
@@ -181,10 +186,10 @@
               
                     </td>
                     
-                     <td> {{min_temp}}
+                     <td> {{format(min_temp)}}
                     </td>
                     
-                    <td> {{max_temp}}
+                    <td> {{format2(max_temp)}}
                     </td>
                 
               
