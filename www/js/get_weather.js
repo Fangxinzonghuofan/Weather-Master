@@ -26,13 +26,9 @@ $(document).on('pagecreate', '#pagethree', function(event) {
             weather : weather.consolidated_weather, 
             
         format: function ( num ) {
-            return num.toFixed(0);
+            return num.toFixed(1);
         }, 
          
-         format2: function ( num ) {
-            return num.toFixed(2);
-        }, 
-        
         
         } 
 	});
