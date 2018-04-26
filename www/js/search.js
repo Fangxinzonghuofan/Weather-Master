@@ -6,21 +6,9 @@ $(document).on("pagecreate","#pagesix",function(){
 
 
 
-
-function searchText() {
-	var city = $('#textinput').val();
-	alert(city);
-}
-
-function storeValue(key, value) {
-	//add some code to store the key-value pair in persistant storage 
-}
-
-
-
 function getCityWeather(city) {
     
-	var city = $('#textinput').val();
+	var city = $('#textinput').val(city);
     var cityURL = "https://www.metaweather.com/api/location/search/?query=" + city ;
     
 	console.log("222");

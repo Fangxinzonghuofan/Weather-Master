@@ -222,49 +222,7 @@
         <div data-role="header"><a href="#pagetwo" data-icon="arrow-l">Back</a><h1>City Weather</h1></div>
         <div data-role="content">
         <h1>Weather conditions</h1>
-<table class="mytable" id= "weatherTable">
-    <tr>
-    <th>Date</th>
-    <th>Climate</th>
-    <th>Min_Temp</th>
-    <th>Max_Temp</th>
-    </tr>
-  <tr>
-    <td>Pending......</td>
-  </tr>
 
-</table>
-            
-        
-    
-          <script id='myTemplate' type='text/ractive'>
-                <tr>
-                <th>Date</th>
-                <th>Climate</th>
-                <th>Min_Temp</th>
-                <th>Max_Temp</th>
-              </tr>
-    
-			{{#weather}}
-                <tr>
-                    <td> {{applicable_date}}
-                    </td>
-                    
-                     <td>
-                     <img src="https://www.metaweather.com/static/img/weather/{{weather_state_abbr}}.svg" height="42" width="42"> {{weather_state_name}}
-              
-                    </td>
-                    
-                     <td> {{format(min_temp)}}
-                    </td>
-                    
-                    <td> {{format(max_temp)}}
-                    </td>
-                
-              
-              </tr>
-			{{/weather}}
-    </script>
     </div>
             
     </div>
@@ -283,7 +241,7 @@
             
         <h2>Weather conditions</h2>
 
-<table class="mytable" id= "weatherTable">
+<table class="citytable" id= "cityTable">
   <tr>
     <th>Date</th>
     <th>Climate</th>
@@ -293,18 +251,14 @@
   
     <td>Pending......</td>
   
-
 </table>
-            
-        
-    
-          <script id='myTemplate' type='text/ractive'>
+            <script id='cityTemplate' type='text/ractive'>
                 <tr>
                 <th>Date</th>
                 <th>Climate</th>
                 <th>Min_Temp</th>
                 <th>Max_Temp</th>
-                </tr>
+              </tr>
     
 			{{#weather}}
                 <tr>
@@ -326,6 +280,7 @@
               </tr>
 			{{/weather}}
     </script>
+
     </div>
 
     </div>
