@@ -57,6 +57,9 @@ function successPosition(position) {
 	$('#time').val("Recieved data at " + time);
 	$('#lattext').val(latitude);
 	$('#longtext').val(longitude);
+    
+    //get weather for location
+    getWeather(latitude, longitude);
 	
 }
 
