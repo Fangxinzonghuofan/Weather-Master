@@ -44,84 +44,83 @@
         <div data-role="header"><a href="#pageone" data-icon="arrow-l">Back</a><h1>UK cities</h1></div>
         <div data-role="content">
         
-      <div data-role="fieldcontain">
-        <input type="search" name="search" id="search" placeholder="Search City...">
-      </div>
-     
-    <ul data-role="listview" data-autodividers="true" data-inset="true">
+    <form>
+    <input data-type="search" id="filterControlgroup-input">
+    </form>
+    <div data-role="controlgroup" data-filter="true" data-input="#filterControlgroup-input">
     <h1>England</h1>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Bath</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Birmingham</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Bradford</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Brighton & Hove</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Bristol</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Cambridge</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Canterbury</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Carlisle</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Chelmsford</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Chester</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Chichester</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Coventry</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Derby</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Durham</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Ely</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Exeter</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Gloucester</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Hereford</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Kingston upon Hull</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Lancaster</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Leeds</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Leicester</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Lichfield</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Lincoln</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Liverpool</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">City of London</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Manchester</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Newcastle upon Tyne</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Norwich</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Nottingham</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Oxford</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Peterborough</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Plymouth</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Portsmouth</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Preston</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Ripon</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Salford</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Salisbury</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Sheffield</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Southampton</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">St Albans</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Stoke-on-Trent</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Sunderland</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Truro</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Wakefield</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Wells</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Westminster</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Winchester</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Wolverhampton</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Worcester</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">York</a></li>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Bath</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Birmingham</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Bradford</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Brighton & Hove</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Bristol</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Cambridge</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Canterbury</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Carlisle</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Chelmsford</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Chester</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Chichester</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Coventry</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Derby</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Durham</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Ely</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Exeter</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Gloucester</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Hereford</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Kingston upon Hull</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Lancaster</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Leeds</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Leicester</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Lichfield</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Lincoln</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Liverpool</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">City of London</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Manchester</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Newcastle upon Tyne</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Norwich</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Nottingham</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Oxford</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Peterborough</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Plymouth</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Portsmouth</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Preston</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Ripon</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Salford</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Salisbury</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Sheffield</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Southampton</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">St Albans</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Stoke-on-Trent</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Sunderland</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Truro</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Wakefield</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Wells</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Westminster</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Winchester</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Wolverhampton</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Worcester</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">York</a>
     <h1>Northern Ireland</h1> 
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Armagh</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Belfast</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Londonderry</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Lisburn</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Newry</a></li>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Armagh</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Belfast</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Londonderry</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Lisburn</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Newry</a>
     <h1>Scotland</h1>   
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Aberdeen</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Dundee</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Edinburgh</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Glasgow</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Inverness</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Perth</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Stirling</a></li>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Aberdeen</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Dundee</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Edinburgh</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Glasgow</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Inverness</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Perth</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Stirling</a>
     <h1>Wales</h1>  
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Bangor</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Cardiff</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Newport</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">St. Asaph</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">St. David's</a></li>
-    <li><a href="#pagefive" data-role="button" data-ajax="false">Swansea</a></li>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Bangor</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Cardiff</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Newport</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">St. Asaph</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">St. David's</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Swansea</a>
   </ul>
         </div>
     </div>
