@@ -2,7 +2,7 @@
 
 function getWeather(latitude, longitude) {
 	
-    var loctionURL = "https://www.metaweather.com/api/location/search/?lattlong=" + latitude +"," + longitude +"/";
+    var loctionURL = "https://www.metaweather.com/api/location/search/?lattlong=" + latitude +"," + longitude;
     
 	console.log("111");
 	// Use an HTML GET request to obtain data from an API
