@@ -1,7 +1,41 @@
-var feedURL = "https://www.metaweather.com/api/location/44418/";
 
-$(document).on('pagecreate', '#pagethree', function(event) {
+
+function getWeather(latitude, longitude) {
 	
+    var loctionURL = "https://www.metaweather.com/api/location/search/?lattlong=" + latitude +"," + longitude +"/";
+    
+	console.log("111");
+	// Use an HTML GET request to obtain data from an API
+	var xmlhttp=new XMLHttpRequest();
+	//xmlhttp.open("GET", feedURL, false);
+	//xmlhttp.send();
+    xmlhttp.onreadystatechange = function() {
+         
+         
+         
+        if (this.readyState == 4 && this.status == 200) {	
+		
+	       var woeid= JSON.parse(xmlhttp.responseText);
+            console.log(woeid[0].woeid);
+            
+            getWeatherForWOEID(woeid);
+            
+	   }
+            
+    }
+	
+
+
+    xmlhttp.open("GET", loctionURL, true);
+    xmlhttp.send();
+    
+ }
+
+
+function getWeatherForWOEID(woeid) {
+
+    var feedURL = "https://www.metaweather.com/api/location/" + woeid + "/";
+
 	console.log("111");
 	// Use an HTML GET request to obtain data from an API
 	var xmlhttp=new XMLHttpRequest();
@@ -40,4 +74,4 @@ $(document).on('pagecreate', '#pagethree', function(event) {
     xmlhttp.open("GET", feedURL, true);
     xmlhttp.send();
     
- });
+ }
