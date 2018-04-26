@@ -19,8 +19,9 @@ function storeValue(key, value) {
 
 
 function getCityWeather(city) {
-	
-    var cityURL = "https://www.metaweather.com/api/location/search/?query=" + '#textinput' ;
+    
+	var city = $('#textinput').val();
+    var cityURL = "https://www.metaweather.com/api/location/search/?query=" + city ;
     
 	console.log("222");
 	// Use an HTML GET request to obtain data from an API
