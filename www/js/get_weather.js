@@ -18,7 +18,7 @@ function getWeather(latitude, longitude) {
 	       var woeid= JSON.parse(xmlhttp.responseText);
             console.log(woeid[0].woeid);
             
-            getWeatherForWOEID(woeid);
+            getWeatherForWOEID(woeid[0].woeid);
             
 	   }
             
