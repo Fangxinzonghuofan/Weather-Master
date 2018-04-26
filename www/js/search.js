@@ -73,8 +73,8 @@ function getWeatherForWOEID(woeid) {
 	
 	//Define Ractive binding
 	var ractive = new Ractive({
-    	el: 'weatherTable', <!-- where -->
-    	template: '#myTemplate', <!-- how -->
+    	el: 'cityTable', <!-- where -->
+    	template: '#cityTemplate', <!-- how -->
     	data: { <!-- what - specify the list of weather reports using dot notation-->
         
             weather : weather.consolidated_weather, 
