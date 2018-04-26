@@ -12,7 +12,7 @@
     <link href="weather_table.css" rel="stylesheet" type="text/css">
     
        <script src="cordova.js"></script>
-    
+    <script src="js/search.js"></script>
     <script src="js/notification.js"></script>
     <script src="./js/get_weather.js"></script>
     <script src="./js/get_my_location.js"></script>
@@ -22,6 +22,7 @@
     <script src="jquery-mobile/jquery-1.11.1.min.js" type="text/javascript"></script>
  
     <script src="js/toast.js"></script>
+    
 
     
 </head>
@@ -34,6 +35,7 @@
             <a href="#pagetwo" data-role="button" data-ajax="false">UK Cities</a>
             <a href="#pagethree" data-role="button" data-ajax="false">My location</a>
             <a href="#pagefour" data-role="button" data-ajax="false">Notification</a>
+            <a href="#pagesix" data-role="button" data-ajax="false">Search City</a>
         </div>
     </div>
     
@@ -43,12 +45,11 @@
     <div data-role="page" id="pagetwo"> 
         <div data-role="header"><a href="#pageone" data-icon="arrow-l">Back</a><h1>UK cities</h1></div>
         <div data-role="content">
-        
-    <form>
+        <form>
     <input data-type="search" id="filterControlgroup-input">
     </form>
     <div data-role="controlgroup" data-filter="true" data-input="#filterControlgroup-input">
-    <h1>England</h1>
+     <h1>England</h1> 
      <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Bath</a>
      <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Birmingham</a>
      <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Bradford</a>
@@ -97,7 +98,7 @@
      <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Wells</a>
      <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Westminster</a>
      <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Winchester</a>
-     <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Wolverhampton</a>
+     <a href="#pagefive" class="ui-btn ui-shadow ui-corner——all">Wolverhampton</a>
      <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Worcester</a>
      <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">York</a>
     <h1>Northern Ireland</h1> 
@@ -123,7 +124,8 @@
      <a href="#pagefive" class="ui-btn ui-shadow ui-corner-all">Swansea</a>
         </div>
     </div>
-    </div>
+        </div>
+    
     
     
     
@@ -267,10 +269,69 @@
             
     </div>
     
+
     
     
+    <div data-role="page" id="pagesix"> 
+        <div data-role="header"><a href="#pageone" data-icon="arrow-l">Back</a><h1>Search Weather</h1></div>
+        
+        <div data-role="content">
     
+  		<input type="text" id="textinput" value=""  />
+  	    
+  	    <button id="searchButton">Search</button>
+            
+        <h2>Weather conditions</h2>
+
+<table class="mytable" id= "weatherTable">
+  <tr>
+    <th>Date</th>
+    <th>Climate</th>
+    <th>Min_Temp</th>
+    <th>Max_Temp</th>
+  </tr>
+  
+    <td>Pending......</td>
+  
+
+</table>
+            
+        
     
+          <script id='myTemplate' type='text/ractive'>
+                <tr>
+                <th>Date</th>
+                <th>Climate</th>
+                <th>Min_Temp</th>
+                <th>Max_Temp</th>
+                </tr>
+    
+			{{#weather}}
+                <tr>
+                    <td> {{applicable_date}}
+                    </td>
+                    
+                     <td>
+                     <img src="https://www.metaweather.com/static/img/weather/{{weather_state_abbr}}.svg" height="42" width="42"> {{weather_state_name}}
+              
+                    </td>
+                    
+                     <td> {{format(min_temp)}}
+                    </td>
+                    
+                    <td> {{format(max_temp)}}
+                    </td>
+                
+              
+              </tr>
+			{{/weather}}
+    </script>
+    </div>
+
+    </div>
+        
+    
+       
     
     
     

@@ -19,7 +19,7 @@
 
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />
-    
+    <plugin name="cordova-plugin-network-information" />
     <plugin name="cordova-plugin-geolocation-android-activator" />
     <plugin name="cordova-plugin-geolocation"  />
 

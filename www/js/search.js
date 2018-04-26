@@ -1,3 +1,23 @@
+$(document).on("pagecreate","#pagesix",function(){
+  $('#searchButton').on("click", function(){
+    searchText();
+  });            
+});            
+
+
+
+
+function searchText() {
+	var city = $('#textinput').val();
+	alert(city);
+}
+
+function storeValue(key, value) {
+	//add some code to store the key-value pair in persistant storage 
+}
+
+
+
 function getCityWeather(city) {
 	
     var cityURL = "https://www.metaweather.com/api/location/search/?query=" + city ;
@@ -29,38 +49,6 @@ function getCityWeather(city) {
     
  }
 
-
-
-function getWeather(latitude, longitude) {
-	
-    var loctionURL = "https://www.metaweather.com/api/location/search/?lattlong=" + latitude +"," + longitude;
-    
-	console.log("111");
-	// Use an HTML GET request to obtain data from an API
-	var xmlhttp=new XMLHttpRequest();
-	//xmlhttp.open("GET", feedURL, false);
-	//xmlhttp.send();
-    xmlhttp.onreadystatechange = function() {
-         
-         
-         
-        if (this.readyState == 4 && this.status == 200) {	
-		
-	       var woeid= JSON.parse(xmlhttp.responseText);
-            console.log(woeid[0].woeid);
-            
-            getWeatherForWOEID(woeid[0].woeid);
-            
-	   }
-            
-    }
-	
-
-
-    xmlhttp.open("GET", loctionURL, true);
-    xmlhttp.send();
-    
- }
 
 
 function getWeatherForWOEID(woeid) {
