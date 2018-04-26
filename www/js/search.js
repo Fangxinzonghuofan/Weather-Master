@@ -1,6 +1,6 @@
 $(document).on("pagecreate","#pagesix",function(){
   $('#searchButton').on("click", function(){
-    searchText();
+    getCityWeather();
   });            
 });            
 
@@ -20,9 +20,9 @@ function storeValue(key, value) {
 
 function getCityWeather(city) {
 	
-    var cityURL = "https://www.metaweather.com/api/location/search/?query=" + city ;
+    var cityURL = "https://www.metaweather.com/api/location/search/?query=" + '#textinput' ;
     
-	console.log("111");
+	console.log("222");
 	// Use an HTML GET request to obtain data from an API
 	var xmlhttp=new XMLHttpRequest();
 	//xmlhttp.open("GET", feedURL, false);
