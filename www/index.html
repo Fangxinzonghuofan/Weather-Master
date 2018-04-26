@@ -220,46 +220,53 @@
         <div data-role="header"><a href="#pagetwo" data-icon="arrow-l">Back</a><h1>City Weather</h1></div>
         <div data-role="content">
         <h1>Weather conditions</h1>
-        <table class="mytable">
+<table class="mytable" id= "weatherTable">
   <tr>
     <th>Date</th>
     <th>Climate</th>
-    <th>Temperature</th>
+    <th>Min_Temp</th>
+    <th>Max_Temp</th>
   </tr>
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
+    <td>Pending......</td>
   </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
+
 </table>
             
+        
+    
+          <script id='myTemplate' type='text/ractive'>
+                <tr>
+                <th>Date</th>
+                <th>Climate</th>
+                <th>Min_Temp</th>
+                <th>Max_Temp</th>
+              </tr>
+    
+			{{#weather}}
+                <tr>
+                    <td> {{applicable_date}}
+                    </td>
+                    
+                     <td>
+                     <img src="https://www.metaweather.com/static/img/weather/{{weather_state_abbr}}.svg" height="42" width="42"> {{weather_state_name}}
+              
+                    </td>
+                    
+                     <td> {{format(min_temp)}}
+                    </td>
+                    
+                    <td> {{format(max_temp)}}
+                    </td>
+                
+              
+              </tr>
+			{{/weather}}
+    </script>
     </div>
-        </div>
+            
+    </div>
+    
     
     
     
