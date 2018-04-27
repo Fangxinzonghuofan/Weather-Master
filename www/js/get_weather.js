@@ -10,9 +10,6 @@ $(document).on("pagecreate","#pagesix",function(){
   });            
 });            
 
-
-
-
 function getCityWeather(city) {
 	
     console.log("#getCityWeather " +city);
@@ -38,16 +35,13 @@ function getCityWeather(city) {
 	   }
             
     }
+	
+
 
     xmlhttp.open("GET", cityURL, true);
     xmlhttp.send();
-
     
  }
-
-
-
-
 
 
 
@@ -83,11 +77,6 @@ function getWeather(latitude, longitude) {
  }
 
 
-
-
-
-
-
 function getWeatherForWOEID(woeid) {
 
     var feedURL = "https://www.metaweather.com/api/location/" + woeid + "/";
@@ -111,61 +100,6 @@ function getWeatherForWOEID(woeid) {
 	var ractive = new Ractive({
     	el: 'weatherTable', <!-- where -->
     	template: '#myTemplate', <!-- how -->
-    	data: { <!-- what - specify the list of weather reports using dot notation-->
-        
-            weather : weather.consolidated_weather, 
-            
-        format: function ( num ) {
-            return num.toFixed(1);
-        }, 
-         
-        
-        } 
-	});
-            
-        }
-	
-};
-
-    xmlhttp.open("GET", feedURL, true);
-    xmlhttp.send();
-    
- }
-
-
-
-
-
-
-
-
-
-
-
-
-function getWeatherForWOEID(woeid) {
-
-    var feedURL = "https://www.metaweather.com/api/location/" + woeid + "/";
-
-	console.log("111");
-	// Use an HTML GET request to obtain data from an API
-	var xmlhttp=new XMLHttpRequest();
-	//xmlhttp.open("GET", feedURL, false);
-	//xmlhttp.send();
-	 xmlhttp.onreadystatechange = function() {
-         
-    if (this.readyState == 4 && this.status == 200) {	
-		
-	// parse the resulting JSON into Javascript Data Object 
-	// you can use a live parser to inspect the contents of the JSON
-	// http://json.parser.online.fr/ 
-	var weather= JSON.parse(xmlhttp.responseText);
-	
-	
-	//Define Ractive binding
-	var ractive = new Ractive({
-    	el: 'cityTable', <!-- where -->
-    	template: '#cityTemplate', <!-- how -->
     	data: { <!-- what - specify the list of weather reports using dot notation-->
         
             weather : weather.consolidated_weather, 
