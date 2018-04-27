@@ -1,6 +1,7 @@
 $(document).on("pagecreate","#pagesix",function(){
   $('#searchButton').on("click", function(){
-    getCityWeather();
+   var city= $('#textinput').val(); 
+    getCityWeather(city);
   });            
 });            
 
