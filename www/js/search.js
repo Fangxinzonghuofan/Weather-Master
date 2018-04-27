@@ -8,7 +8,7 @@ $(document).on("pagecreate","#pagesix",function(){
 
 function getCityWeather(city) {
 	
-    var locationURL = "https://www.metaweather.com/api/location/search/?query=" + city ;
+    var cityURL = "https://www.metaweather.com/api/location/search/?query=" + city ;
     
 	console.log("111");
 	// Use an HTML GET request to obtain data from an API
@@ -32,7 +32,7 @@ function getCityWeather(city) {
 	
 
 
-    xmlhttp.open("GET", loctionURL, true);
+    xmlhttp.open("GET", cityURL, true);
     xmlhttp.send();
     
  }
