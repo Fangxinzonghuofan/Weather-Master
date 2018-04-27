@@ -28,7 +28,7 @@ function getCityWeather(city) {
         if (this.readyState == 4 && this.status == 200) {	
 		
 	       var woeid= JSON.parse(xmlhttp.responseText);
-            console.log(woeid);
+            console.log(woeid[0].woeid);
             
             getWeatherForWOEID(woeid[0].woeid);
             
