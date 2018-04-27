@@ -7,11 +7,10 @@ $(document).on("pagecreate","#pagesix",function(){
 
 
 function getCityWeather(city) {
+	
+    var locationURL = "https://www.metaweather.com/api/location/search/?query=" + city ;
     
-	var city = $('#textinput').val(city);
-    var cityURL = "https://www.metaweather.com/api/location/search/?query=" + city ;
-    
-	console.log("222");
+	console.log("111");
 	// Use an HTML GET request to obtain data from an API
 	var xmlhttp=new XMLHttpRequest();
 	//xmlhttp.open("GET", feedURL, false);
@@ -33,7 +32,7 @@ function getCityWeather(city) {
 	
 
 
-    xmlhttp.open("GET", cityURL, true);
+    xmlhttp.open("GET", loctionURL, true);
     xmlhttp.send();
     
  }
@@ -61,8 +60,8 @@ function getWeatherForWOEID(woeid) {
 	
 	//Define Ractive binding
 	var ractive = new Ractive({
-    	el: 'cityTable', <!-- where -->
-    	template: '#cityTemplate', <!-- how -->
+    	el: 'weatherTable', <!-- where -->
+    	template: '#myTemplate', <!-- how -->
     	data: { <!-- what - specify the list of weather reports using dot notation-->
         
             weather : weather.consolidated_weather, 
