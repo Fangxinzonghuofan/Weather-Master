@@ -5,13 +5,14 @@ $(document).on("pagecreate","#pagesix",function(){
   $('#searchButton').on("click", function(){
       console.log("#searchButton click");
    var city= $('#textinput').val(); 
+      console.log("#searchButton val " + city  );
     getCityWeather(city);
   });            
 });            
 
 function getCityWeather(city) {
 	
-    console.log("#getCityWeather");
+    console.log("#getCityWeather" +city);
     
     var cityURL = "https://www.metaweather.com/api/location/search/?query=" + city ;
     
