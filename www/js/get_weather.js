@@ -12,7 +12,7 @@ $(document).on("pagecreate","#pagesix",function(){
 
 function getCityWeather(city) {
 	
-    console.log("#getCityWeather" +city);
+    console.log("#getCityWeather " +city);
     
     var cityURL = "https://www.metaweather.com/api/location/search/?query=" + city ;
     
@@ -28,9 +28,9 @@ function getCityWeather(city) {
         if (this.readyState == 4 && this.status == 200) {	
 		
 	       var woeid= JSON.parse(xmlhttp.responseText);
-            console.log(woeid.woeid);
+            console.log(woeid);
             
-            getWeatherForWOEID(woeid.woeid);
+            getWeatherForWOEID(woeid[0].woeid);
             
 	   }
             

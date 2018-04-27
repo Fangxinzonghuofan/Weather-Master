@@ -28,6 +28,8 @@ function updatePosition() {
 	
 	//instruct location service to get position with appropriate callbacks
 	watchID = navigator.geolocation.watchPosition(successPosition, failPosition, locationOptions);
+    console.log("geolocation start: " + watchID);
+    
 }
 
 //Call this function when you want to watch for chnages in position
@@ -37,6 +39,7 @@ function stopPosition() {
 	$('#time').val("Press the button to get location data");
 	
 	//instruct location service to get position with appropriate callbacks
+    console.log("geolocation clear: " + watchID);
 	navigator.geolocation.clearWatch(watchID);
 }
 
