@@ -10,6 +10,9 @@ $(document).on("pagecreate","#pagesix",function(){
   });            
 });            
 
+
+
+
 function getCityWeather(city) {
 	
     console.log("#getCityWeather " +city);
@@ -33,10 +36,15 @@ function getCityWeather(city) {
             getWeatherForWOEID(woeid[0].woeid);
             
 	   }
-         
-        
-        
-        function getWeatherForWOEID(woeid) {
+            
+    }
+
+    xmlhttp.open("GET", cityURL, true);
+    xmlhttp.send();
+    
+    
+    
+    function getWeatherForWOEID(woeid) {
 
     var feedURL = "https://www.metaweather.com/api/location/" + woeid + "/";
 
@@ -57,8 +65,8 @@ function getCityWeather(city) {
 	
 	//Define Ractive binding
 	var ractive = new Ractive({
-    	el: 'weatherTable', <!-- where -->
-    	template: '#myTemplate', <!-- how -->
+    	el: 'cityTable', <!-- where -->
+    	template: '#cityTemplate', <!-- how -->
     	data: { <!-- what - specify the list of weather reports using dot notation-->
         
             weather : weather.consolidated_weather, 
@@ -79,15 +87,14 @@ function getCityWeather(city) {
     xmlhttp.send();
     
  }
-        
-    }
-	
-
-
-    xmlhttp.open("GET", cityURL, true);
-    xmlhttp.send();
+    
+    
     
  }
+
+
+
+
 
 
 
@@ -121,6 +128,11 @@ function getWeather(latitude, longitude) {
     xmlhttp.send();
     
  }
+
+
+
+
+
 
 
 function getWeatherForWOEID(woeid) {
