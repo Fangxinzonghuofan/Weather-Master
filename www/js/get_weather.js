@@ -1,5 +1,18 @@
+$(document).on("pagecreate","#pagesix",function(){
+    
+    console.log("pagecreate #pagesix");
+    
+  $('#searchButton').on("click", function(){
+      console.log("#searchButton click");
+   var city= $('#textinput').val(); 
+    getCityWeather(city);
+  });            
+});            
+
 function getCityWeather(city) {
 	
+    console.log("#getCityWeather");
+    
     var cityURL = "https://www.metaweather.com/api/location/search/?query=" + city ;
     
 	console.log("111");
