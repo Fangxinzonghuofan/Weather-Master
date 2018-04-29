@@ -18,6 +18,12 @@
     </author>
 
     <access origin="*" />
+    
+    <!-- required plugins go here -->
+ <plugin name="cordova-plugin-dialogs"/>
+<!-- <plugin name="cordova-plugin-local-notification" version="0.8" />-->
+ <plugin name="cordova-plugin-local-notification" version="0.9" />
+    
     <plugin name="cordova-plugin-whitelist" version="1" />
     <plugin name="cordova-plugin-network-information" />
     <plugin name="cordova-plugin-geolocation-android-activator" />
