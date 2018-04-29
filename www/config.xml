@@ -7,14 +7,14 @@
         versionCode = "1"
         version   = "1.0.0">
 
-    <name>Weather Master Test</name>
+    <name>Weather Master</name>
 
     <description>
-        A sample application that counts the occurances of lifecycle events.
+        A weather searching app.
     </description>
 
     <author>
-        ZZY
+        Zheyu Zhang
     </author>
 
     <access origin="*" />
