@@ -30,7 +30,7 @@ function getCityWeather(city) {
 	       var woeid= JSON.parse(xmlhttp.responseText);
             console.log(woeid[0].woeid);
             
-            getWeatherForWOEID(woeid[0].woeid);
+            getWeatherForWOEID(woeid[0].woeid, "searchTable");
             
 	   }
             
@@ -63,7 +63,7 @@ function getWeather(latitude, longitude) {
 	       var woeid= JSON.parse(xmlhttp.responseText);
             console.log(woeid[0].woeid);
             
-            getWeatherForWOEID(woeid[0].woeid);
+            getWeatherForWOEID(woeid[0].woeid, "locationTable");
             
 	   }
             
@@ -77,7 +77,7 @@ function getWeather(latitude, longitude) {
  }
 
 
-function getWeatherForWOEID(woeid) {
+function getWeatherForWOEID(woeid, tableName) {
 
     var feedURL = "https://www.metaweather.com/api/location/" + woeid + "/";
 
@@ -98,7 +98,7 @@ function getWeatherForWOEID(woeid) {
 	
 	//Define Ractive binding
 	var ractive = new Ractive({
-    	el: 'weatherTable', <!-- where -->
+    	el: tableName, <!-- where -->
     	template: '#myTemplate', <!-- how -->
     	data: { <!-- what - specify the list of weather reports using dot notation-->
         
