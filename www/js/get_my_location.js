@@ -8,9 +8,9 @@ var locationOptions = {
 
 //when the jQuery Mobile page is initialised
 $(document).on('pageinit', function() {
-	
+	checkConnection();
 	//set up listener for button clicks
-	$('#startLocationButton').on('click', updatePosition);
+	$('#startLocationButton').on('click', updatePosition,);
 	$('#stopLocationButton').on('click', stopPosition);
 	
 	//change time box to show message
@@ -25,7 +25,6 @@ $(document).on('pageinit', function() {
 
 //Call this function when you want to watch for chnages in position
 function updatePosition() {
-    checkConnection();
 	
 	//change time box to show updated message
 	$('#time').val("Getting data...");
