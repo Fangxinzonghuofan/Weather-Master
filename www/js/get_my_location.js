@@ -8,9 +8,8 @@ var locationOptions = {
 
 //when the jQuery Mobile page is initialised
 $(document).on('pageinit', function() {
-	
 	//set up listener for button clicks
-	$('#startLocationButton').on('click', updatePosition);
+	$('#startLocationButton').on('click', updatePosition,);
 	$('#stopLocationButton').on('click', stopPosition);
 	
 	//change time box to show message
@@ -25,14 +24,13 @@ $(document).on('pageinit', function() {
 
 //Call this function when you want to watch for chnages in position
 function updatePosition() {
-	
+	checkConnection();
 	//change time box to show updated message
 	$('#time').val("Getting data...");
 	
 	//instruct location service to get position with appropriate callbacks
 	watchID = navigator.geolocation.watchPosition(successPosition, failPosition, locationOptions);
     console.log("geolocation start: " + watchID);
-    
 }
 
 //Call this function when you want to watch for chnages in position
@@ -60,9 +58,9 @@ function successPosition(position) {
 	var longitude = position.coords.longitude;
 	
 	//OK. Now we want to update the display with the correct values
-	$('#time').val("Recieved data at " + time);
+/*	$('#time').val("Recieved data at " + time);
 	$('#lattext').val(latitude);
-	$('#longtext').val(longitude);
+	$('#longtext').val(longitude); */
     
     //get weather for location
     getWeather(latitude, longitude);
@@ -74,4 +72,24 @@ function failPosition(error) {
 	//change time box to show updated message
 	$('#time').val("Error getting data: " + error);
 	
+}
+
+
+
+
+
+function checkConnection() {
+    var networkState = navigator.connection.type;
+ 
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.CELL]     = 'Cell generic connection';
+    states[Connection.NONE]     = 'No network connection';
+ 
+    alert('Connection type: ' + states[networkState]);
 }
