@@ -8,6 +8,7 @@ var locationOptions = {
 
 //when the jQuery Mobile page is initialised
 $(document).on('pageinit', function() {
+    checkConnection();
 	//set up listener for button clicks
 	$('#startLocationButton').on('click', updatePosition,);
 	$('#stopLocationButton').on('click', stopPosition);
@@ -31,7 +32,6 @@ function updatePosition() {
 	//instruct location service to get position with appropriate callbacks
 	watchID = navigator.geolocation.watchPosition(successPosition, failPosition, locationOptions);
     console.log("geolocation start: " + watchID);
-    checkConnection();
 }
 
 //Call this function when you want to watch for chnages in position
